@@ -23,7 +23,7 @@ public class BuildManager : MonoBehaviour
     private blueprintTorreta TorretaAConstruir;
 
     public bool PuedeConstruir { get { return TorretaAConstruir != null; } }
-
+    public bool TieneDinero { get { return Stats.Dinero >= TorretaAConstruir.coste; } }
     public void ConstruirTorretaOn(nodo node)
     {
         if (Stats.Dinero < TorretaAConstruir.coste)

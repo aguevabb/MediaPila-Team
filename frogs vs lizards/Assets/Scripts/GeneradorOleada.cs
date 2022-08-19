@@ -29,7 +29,9 @@ public class GeneradorOleada : MonoBehaviour
         }
         cuentaRegresiva -= Time.deltaTime;
 
-        oleadaCountdownText.text = Mathf.Round(cuentaRegresiva).ToString();
+        cuentaRegresiva = Mathf.Clamp(cuentaRegresiva, 0f, Mathf.Infinity);
+
+        oleadaCountdownText.text = String.Format("{0:00.00}", cuentaRegresiva);
     }
 
     IEnumerator SpawnOleada()
