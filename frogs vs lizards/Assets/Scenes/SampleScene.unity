@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -582,8 +582,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9918cf1b4f8ad849b2bdb452dda1cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 5607026058739799736, guid: 4be8ff8eb79613840ac854062cabcbc5, type: 3}
-  _timer: 0.25
+  bullet: {fileID: 5607026058739799736, guid: 5017f9005da94244f8943eaaec626c09, type: 3}
+  spawnPoint: {fileID: 1843979119}
+  shotForce: 6
+  shotRate: 0.25
 --- !u!1 &116057525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5187492474324732875, guid: 171961d59903b80459d048f1cc380748, type: 3}
@@ -11842,6 +11844,11 @@ GameObject:
 --- !u!1 &1843866408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5096695508869822176, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+  m_PrefabInstance: {fileID: 5096695508125466529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1843979119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5096695507495121003, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
   m_PrefabInstance: {fileID: 5096695508125466529}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864048891 stripped

@@ -5,15 +5,24 @@ using UnityEngine;
 
 public class DisparoTorreta : MonoBehaviour
 {
-    [SerializeField] private GameObject _bullet;
-    [SerializeField] private float _timer = 0.25f;
+    public GameObject bullet;
+    public Transform spawnPoint;
+    public float shotForce;
+    public float shotRate;
+    private float shotRateTime = 0;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(_bullet, transform.position, transform.rotation);
-
+            if (Time.time>shotRateTime)
+            {
+                GameObject newBullet;
+                newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+                newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward*shotForce);
+                shotRateTime = Time.time + shotRate;
+                Destroy(newBullet, 2);
+            }
         }
     }
 }

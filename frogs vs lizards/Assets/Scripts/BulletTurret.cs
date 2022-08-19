@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BulletTurret : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1f;
-    [SerializeField] private float _timelife = 3f;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _timelife;
 
     private void Start()
     {
@@ -21,9 +21,11 @@ public class BulletTurret : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Player")
+        if (other.tag=="Enemy")
         {
             Destroy(gameObject);
+            
+            Debug.Log("destruido");
         }
     }
 }
