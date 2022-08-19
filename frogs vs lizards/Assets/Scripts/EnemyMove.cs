@@ -30,11 +30,20 @@ public class EnemyMove : MonoBehaviour
         if (wavepointIndex >= Waypoints.points.Length - 1)
         {
             Destroy(gameObject);
+            BaseFinal();
             return;
         }
 
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
+
+    }
+
+    void BaseFinal()
+    {
+        Stats.Vida--;
+        Destroy(gameObject);
     }
 
 }
+
