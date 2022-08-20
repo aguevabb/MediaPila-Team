@@ -586,6 +586,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1843979119}
   shotForce: 6
   shotRate: 0.25
+  destroyTime: 1
 --- !u!1 &116057525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5187492474324732875, guid: 171961d59903b80459d048f1cc380748, type: 3}
