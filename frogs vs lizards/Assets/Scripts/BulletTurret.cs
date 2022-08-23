@@ -19,12 +19,14 @@ public class BulletTurret : MonoBehaviour
 
     }
 
+    //FindObjectOfType<"clase">(); sirve para clases unicas, se usa mayormente en el "start", nunca poner en update//
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag=="Enemy")
         {
-            Destroy(gameObject);
-            
+            GameObject destruido = other.gameObject;
+            Debug.Log(destruido);
+            Destroy(destruido);
             Debug.Log("destruido");
         }
     }
