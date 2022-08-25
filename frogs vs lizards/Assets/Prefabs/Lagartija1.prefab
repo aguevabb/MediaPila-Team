@@ -367,6 +367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 15
+  vida: 100
+  value: 50
+  BarraVida: {fileID: 478745021}
 --- !u!114 &255598041932888644
 MonoBehaviour:
   m_ObjectHideFlags: 0

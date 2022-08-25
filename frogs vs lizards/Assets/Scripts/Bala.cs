@@ -7,6 +7,9 @@ public class Bala : MonoBehaviour
     private Transform target;
 
     public float velocidad = 70f;
+
+    public int damage = 50;
+
     public float RadioExplosion = 0f;
     public GameObject efectoImpacto;
 
@@ -72,7 +75,12 @@ public class Bala : MonoBehaviour
 
     void Dano(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        EnemyMove e = enemy.GetComponent<EnemyMove>();
+
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     void OnDrawGizmosSelected()

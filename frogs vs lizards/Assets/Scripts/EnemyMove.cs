@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMove : MonoBehaviour
 {
     public float velocidad = 10f;
+
+    public float vidaInicial = 100;
+    private float vida;
+
+    public int value = 50;
+
+    public Image BarraVida;
 
     private Transform target;
     private int wavepointIndex = 0;
@@ -12,6 +20,25 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         target = Waypoints.points[0];
+        vida = vidaInicial;
+    }
+
+    public void TakeDamage (int amount)
+    {
+        vida -= amount;
+
+        BarraVida.fillAmount = vida / vidaInicial;
+
+        if (vida <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die ()
+    {
+        Stats.Dinero += value;
+        Destroy(gameObject);
     }
 
     void Update()
