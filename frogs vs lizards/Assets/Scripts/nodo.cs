@@ -33,14 +33,14 @@ public class nodo : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if (torreta != null)
+        {
+            buildManager.SeleccionarNodo(this);
+            return;
+        }
         if (!buildManager.PuedeConstruir)
             return;
 
-        if (torreta != null)
-        {
-            Debug.Log("No puedes construir en este lugar!!!");
-            return;
-        }
         buildManager.ConstruirTorretaOn(this);
 
     }

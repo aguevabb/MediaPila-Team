@@ -18,9 +18,10 @@ public class BuildManager : MonoBehaviour
 
     public GameObject TorretaStandarPrefab;
     public GameObject OtroTorretaStandarPrefab;
-
+    public NodoUI nodeUI;
 
     private blueprintTorreta TorretaAConstruir;
+    private nodo NodoSeleccionado;
 
     public bool PuedeConstruir { get { return TorretaAConstruir != null; } }
     public bool TieneDinero { get { return Stats.Dinero >= TorretaAConstruir.coste; } }
@@ -40,9 +41,27 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Torreta construida, dinero restante: " + Stats.Dinero);
     }
 
+    public void SeleccionarNodo (nodo node)
+    {
+        if (NodoSeleccionado == node)
+        {
+            DeseleccionarNode();
+            return;
+        }
+        NodoSeleccionado = node;
+        TorretaAConstruir = null;
+        nodeUI.SetObjetivo(node);
+    }
+
+    public void DeseleccionarNode()
+    {
+        NodoSeleccionado = null;
+        nodeUI.Esconder();
+    }
     public void SeleccionarTorretaAConstruir(blueprintTorreta torret)
     {
         TorretaAConstruir = torret;
+        DeseleccionarNode();
     }
 
 }
