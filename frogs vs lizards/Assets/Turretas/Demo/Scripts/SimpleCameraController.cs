@@ -168,13 +168,13 @@ namespace Unity
 
                 // si cambiamos la posicion de la camara de la torreta hay que cambiar estos valores
                 //arriba y abajo
-                if (m_TargetCameraState.pitch >= 30)
+                if (m_TargetCameraState.pitch >= 70)
                 {
-                    m_TargetCameraState.pitch = 30;
+                    m_TargetCameraState.pitch = 70;
 
-                } else if (m_TargetCameraState.pitch <= 5)
+                } else if (m_TargetCameraState.pitch <= 15)
                 {
-                    m_TargetCameraState.pitch = 5;
+                    m_TargetCameraState.pitch = 15;
 
                 }
 

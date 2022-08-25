@@ -17,7 +17,7 @@ namespace GT2
         public float ElevationSpeed = 30f;
 
         [Tooltip("Highest upwards elevation the turret's barrels can aim.")]
-        public float MaxElevation = 160f;
+        public float MaxElevation = 60f;
 
         [Tooltip("Lowest downwards elevation the turret's barrels can aim.")]
         public float MaxDepression = 5f;
