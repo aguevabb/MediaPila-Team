@@ -6,6 +6,7 @@ public class Torreta : MonoBehaviour
 {
 
 	private Transform target;
+	private EnemyMove targetEnemy;
 
 	[Header("General")]
 
@@ -20,6 +21,7 @@ public class Torreta : MonoBehaviour
 	[Header("Usar Laser")]
 
 	public bool usarLaser = false;
+	public int danoPorTiempo = 30;
 	public LineRenderer lineRenderer;
 	public ParticleSystem EfectoImpacto;
 
@@ -109,6 +111,8 @@ public class Torreta : MonoBehaviour
 
 	void Laser()
     {
+		target.GetComponent<EnemyMove>().TakeDamage(danoPorTiempo * Time.deltaTime);
+
 		if (!lineRenderer.enabled)
         {
 			lineRenderer.enabled = true;

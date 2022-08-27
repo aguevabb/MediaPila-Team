@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour
         vida = vidaInicial;
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (float amount)
     {
         vida -= amount;
 
