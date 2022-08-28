@@ -5,42 +5,43 @@ using UnityEngine;
 
 public class DisparoTorreta : MonoBehaviour
 {
-    public GameObject bullet;
-    public Transform spawnPoint;
-    public float shotForce;
-    public float shotRate;
-    private float shotRateTime = 0;
-    [Range(0.1f, 2f)]
-    [SerializeField] float destroyTime;
+    public float damage = 10f;
+    public float range = 100f;
+    public float nextshotRate = 0f;
+    public float shotRateTime = 15f;
+    public Camera turretCam;
+    public Vector3 raycastHits;
 
-    
+
     private void FixedUpdate()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && Time.time >= nextshotRate)
         {
-            if (Time.time>shotRateTime)
+            nextshotRate = Time.time + 1f / shotRateTime;
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(turretCam.transform.position, turretCam.transform.forward, out hit, range))
+        {
+            Debug.Log(hit.transform.name);
+
+            raycastHits = hit.point;
+
+            EnemyMove EnemyMove = hit.transform.GetComponent<EnemyMove>();
+            if (EnemyMove != null)
             {
-                GameObject newBullet;
-                newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
-                newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward*shotForce);
-                shotRateTime = Time.time + shotRate;
-                Destroy(newBullet, destroyTime);
+                EnemyMove.TakeDamage(damage);
             }
         }
     }
-    /// <summary>
-    /// Variable que limita la cantidad de balas activas en el mapa.
-    /// </summary>
-    public float DestroyTime
+    private void OnDrawGizmos()
     {
-        get
-        {
-            return destroyTime;
-        }
-        set
-        {
-            destroyTime = value;
-        }
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(turretCam.transform.position, raycastHits);
     }
 }
 

@@ -10,10 +10,9 @@ public class EnemyHealth : MonoBehaviour
     {
 
         health -= amount;
-
         healthBar.fillAmount = health /100f;
 
-        if (health == 0)
+        if (health <= 0)
         {
 
             die();

@@ -7,8 +7,8 @@ public class EnemyMove : MonoBehaviour
 {
     public float velocidad = 10f;
 
-    public float vidaInicial = 100;
-    private float vida;
+    public float vidaInicial = 100f;
+    private float vida = 0f;
 
     public int value = 50;
 
@@ -29,7 +29,7 @@ public class EnemyMove : MonoBehaviour
 
         BarraVida.fillAmount = vida / vidaInicial;
 
-        if (vida <= 0)
+        if (vida <= 0f)
         {
             Die();
         }

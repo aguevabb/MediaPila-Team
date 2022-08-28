@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 5091960651729430583}
   - component: {fileID: 5128717227061618889}
   - component: {fileID: 5129296323630031555}
+  - component: {fileID: 2797863284795102146}
   m_Layer: 0
   m_Name: Turretita
   m_TagString: Untagged
@@ -175,6 +176,24 @@ MonoBehaviour:
   TurretAim: {fileID: 5128717227061618889}
   TargetPoint: {fileID: 5096695507495121003}
   isIdle: 0
+--- !u!114 &2797863284795102146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096086689152295693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9918cf1b4f8ad849b2bdb452dda1cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  nextshotRate: 0
+  shotRateTime: 0
+  turretCam: {fileID: 5096695508869822180}
+  raycastHits: {x: 0, y: 0, z: 0}
 --- !u!1 &5096695507495121000
 GameObject:
   m_ObjectHideFlags: 0

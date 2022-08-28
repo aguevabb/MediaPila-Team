@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 15
-  vida: 100
+  vidaInicial: 100
   value: 50
   BarraVida: {fileID: 478745021}
 --- !u!114 &255598041932888644
@@ -383,4 +383,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 478745021}
