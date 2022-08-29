@@ -75,7 +75,7 @@ public class Bala : MonoBehaviour
 
     void Dano(Transform enemy)
     {
-        EnemyMove e = enemy.GetComponent<EnemyMove>();
+        Enemy e = enemy.GetComponent<Enemy>();
 
         if (e != null)
         {

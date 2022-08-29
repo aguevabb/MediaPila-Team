@@ -31,10 +31,10 @@ public class DisparoTorreta : MonoBehaviour
 
             raycastHits = hit.point;
 
-            EnemyMove EnemyMove = hit.transform.GetComponent<EnemyMove>();
-            if (EnemyMove != null)
+            Enemy Enemy = hit.transform.GetComponent<Enemy>();
+            if (Enemy != null)
             {
-                EnemyMove.TakeDamage(damage);
+                Enemy.TakeDamage(damage);
             }
         }
     }

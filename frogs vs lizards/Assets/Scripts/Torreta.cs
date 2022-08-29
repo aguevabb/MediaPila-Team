@@ -6,7 +6,7 @@ public class Torreta : MonoBehaviour
 {
 
 	private Transform target;
-	private EnemyMove targetEnemy;
+	private Enemy targetEnemy;
 
 	[Header("General")]
 
@@ -22,6 +22,7 @@ public class Torreta : MonoBehaviour
 
 	public bool usarLaser = false;
 	public int danoPorTiempo = 30;
+	public float slowAmount = 0.5f;
 	public LineRenderer lineRenderer;
 	public ParticleSystem EfectoImpacto;
 
@@ -59,6 +60,7 @@ public class Torreta : MonoBehaviour
 		if (enemigoMasCerca != null && menorDistancia <= rango)
 		{
 			target = enemigoMasCerca.transform;
+			targetEnemy = enemigoMasCerca.GetComponent<Enemy>();
 		}
 		else
 		{
@@ -111,7 +113,8 @@ public class Torreta : MonoBehaviour
 
 	void Laser()
     {
-		target.GetComponent<EnemyMove>().TakeDamage(danoPorTiempo * Time.deltaTime);
+		targetEnemy.TakeDamage(danoPorTiempo * Time.deltaTime);
+		targetEnemy.Slow(slowAmount);
 
 		if (!lineRenderer.enabled)
         {

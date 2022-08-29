@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 4966836589292284863}
   - component: {fileID: 8360664247913985434}
   - component: {fileID: 144740053883804789}
-  - component: {fileID: 255598041932888644}
+  - component: {fileID: -1162386633419092666}
   m_Layer: 0
   m_Name: Lagartija1
   m_TagString: Enemy
@@ -366,11 +366,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a10e659c3c8484ab5448e9f9d0b227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadInicial: 10
   velocidad: 15
   vidaInicial: 100
   value: 50
   BarraVida: {fileID: 478745021}
---- !u!114 &255598041932888644
+--- !u!114 &-1162386633419092666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,8 +380,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1913013453349972151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efd059b9c3ecf144b2934932d8939bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f183e6a2a4c0a73428350e5b12e52c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  healthBar: {fileID: 478745021}
