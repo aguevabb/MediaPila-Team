@@ -19,7 +19,13 @@ public class DisparoTorreta : MonoBehaviour
     public float maxAmmo;
     public float currentAmmo;
     public float reloadTime;
-    
+
+
+    //Efectos//
+    public ParticleSystem MuzzleL;
+    public ParticleSystem MuzzleR;
+    public bool Muzzling = false;
+
     private void Awake()
     {
         currentAmmo = maxAmmo;
@@ -54,6 +60,8 @@ public class DisparoTorreta : MonoBehaviour
                 Enemy.TakeDamage(damage);
             }
         }
+        Muzzling = !Muzzling;
+        Muzzle();
     }
     private void OnDrawGizmos()
     {
@@ -74,7 +82,19 @@ public class DisparoTorreta : MonoBehaviour
 
         return false;
     }
-    
+
+    void Muzzle()
+    {
+        if (Muzzling)
+        {
+            MuzzleL.Play();
+        }
+        else
+        {
+            MuzzleR.Play();
+        }
+    }
+
     //Retardo para la recarga//
     IEnumerator Reload()
     {
