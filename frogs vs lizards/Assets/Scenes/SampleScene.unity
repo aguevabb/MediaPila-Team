@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45139366, g: 0.5008963, b: 0.5723624, a: 1}
+  m_IndirectSpecularColor: {r: 0.4513933, g: 0.500896, b: 0.5723614, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15770,6 +15770,14 @@ PrefabInstance:
     - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: damage
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+      propertyPath: maxAmmo
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+      propertyPath: reloadTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: shotRateTime

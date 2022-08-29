@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DisparoTorreta : MonoBehaviour
 {
+    //VARIABLES//
+    //Disparo y daño//
     public float damage = 10f;
     public float range = 100f;
     public float nextshotRate = 0f;
@@ -13,12 +15,27 @@ public class DisparoTorreta : MonoBehaviour
     public Vector3 raycastHits;
 
 
+    //Munición y recarga//
+    public float maxAmmo;
+    public float currentAmmo;
+    public float reloadTime;
+    
+    private void Awake()
+    {
+        currentAmmo = maxAmmo;
+    }
     private void FixedUpdate()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextshotRate)
         {
             nextshotRate = Time.time + 1f / shotRateTime;
-            Shoot();
+            tryShot();
+            //Shoot();//
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(Reload());
         }
     }
 
@@ -42,6 +59,29 @@ public class DisparoTorreta : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(turretCam.transform.position, raycastHits);
+    }
+    
+    //RECARGA//
+    //Comprobando si hay municion//
+    private bool tryShot()
+    {
+        if (currentAmmo>=1)
+        {
+            Shoot();
+            currentAmmo -= 1;
+            return true;
+        }
+
+        return false;
+    }
+    
+    //Retardo para la recarga//
+    IEnumerator Reload()
+    {
+        Debug.Log("Recargando.....");
+        yield return new WaitForSeconds(reloadTime);
+        currentAmmo = maxAmmo;
+        Debug.Log("Recarga Finalizada");
     }
 }
 
