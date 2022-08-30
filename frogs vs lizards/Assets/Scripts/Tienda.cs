@@ -6,6 +6,7 @@ public class Tienda : MonoBehaviour{
 
     public blueprintTorreta torretaStandar;
     public blueprintTorreta misiles;
+    public blueprintTorreta RayoLaser;
 
     BuildManager buildManager;
 
@@ -24,4 +25,9 @@ public class Tienda : MonoBehaviour{
         buildManager.SeleccionarTorretaAConstruir(misiles);
     }
 
+    public void SeleccionarRayoLaser()
+    {
+        Debug.Log("Otra Torreta mas Comprada");
+        buildManager.SeleccionarTorretaAConstruir(RayoLaser);
+    }
 }
