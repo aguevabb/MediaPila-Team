@@ -16988,6 +16988,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1647138324554514524, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: range
       value: 300
@@ -17075,14 +17079,6 @@ PrefabInstance:
     - target: {fileID: 5096695508869822179, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096695508869822180, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
-      propertyPath: field of view
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096695508869822180, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
-      propertyPath: near clip plane
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5109394810622925829, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: m_Materials.Array.data[0]
