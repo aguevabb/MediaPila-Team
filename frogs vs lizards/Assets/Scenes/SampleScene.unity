@@ -13380,11 +13380,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4fdac0e9a249d9449f2dfd2cac457a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4183693922881870440, guid: c0aa3e86562db9942b85dfbb88cf8b22, type: 3}
+  oleadas:
+  - enemy: {fileID: 1913013453349972151, guid: c0aa3e86562db9942b85dfbb88cf8b22, type: 3}
+    contador: 1
+    rate: 2
+  - enemy: {fileID: 1913013453349972151, guid: c0aa3e86562db9942b85dfbb88cf8b22, type: 3}
+    contador: 2
+    rate: 2
+  - enemy: {fileID: 1913013453349972151, guid: c0aa3e86562db9942b85dfbb88cf8b22, type: 3}
+    contador: 5
+    rate: 2
+  - enemy: {fileID: 1913013453349972151, guid: c02bdc66f62dbd541b133095a027c85f, type: 3}
+    contador: 3
+    rate: 1
+  - enemy: {fileID: 1913013453349972151, guid: 88219ed52986dea4fa1994680c00f844, type: 3}
+    contador: 10
+    rate: 3
   spawnPoint: {fileID: 364747125}
   tiempoEntreOleadas: 10
   oleadaCountdownText: {fileID: 179281747}
-  oleadaTotal: 5
 --- !u!4 &1869745097
 Transform:
   m_ObjectHideFlags: 0

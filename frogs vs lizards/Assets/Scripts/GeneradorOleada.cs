@@ -8,7 +8,7 @@ public class GeneradorOleada : MonoBehaviour
 {
     public static int EnemigoVivos = 0;
 
-    public Transform enemyPrefab;
+    public Oleada[] oleadas;
 
     public Transform spawnPoint;
 
@@ -17,9 +17,7 @@ public class GeneradorOleada : MonoBehaviour
 
     public Text oleadaCountdownText;
 
-    public int oleadaTotal = 0;
-    
-    private int oleadaNumero = 0;
+    private int oleadaTotal = 0;
 
     void Update()
     {
@@ -43,22 +41,28 @@ public class GeneradorOleada : MonoBehaviour
 
     IEnumerator SpawnOleada()
     {
-        Debug.Log("!!!Oleada en Camino!!!");
+        //PlayerPrefs.Rounds++;
 
-        oleadaTotal = oleadaNumero;
+        Oleada oleada = oleadas[oleadaTotal]; 
 
-        oleadaNumero = oleadaTotal + 1;
-
-        for (int i = 0; i < oleadaNumero; i++)
+        for (int i = 0; i < oleada.contador; i++)
         {
-            SpawnEnemigo();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemigo(oleada.enemy);
+            yield return new WaitForSeconds(1f / oleada.rate);
 
         }
+
+        oleadaTotal++;
+
+        if (oleadaTotal == oleadas.Length)
+        {
+            Debug.Log("NIVEL COMPLETADO!");
+            this.enabled = false;
+        }
     }
-    void SpawnEnemigo()
+    void SpawnEnemigo(GameObject enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         EnemigoVivos++;
     }
 }

@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 144740053883804789}
   - component: {fileID: -1162386633419092666}
   m_Layer: 0
-  m_Name: Lagartija1
+  m_Name: Enemy_Paladin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a9fb00f9a9c9d9439cc7dd0370c66ce, type: 2}
+  - {fileID: 2100000, guid: bf1c5b5312368b545bacdb9f4d5e0071, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a10e659c3c8484ab5448e9f9d0b227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadInicial: 10
+  velocidadInicial: 7
   velocidad: 15
-  vidaInicial: 100
-  value: 50
+  vidaInicial: 350
+  value: 150
   BarraVida: {fileID: 478745021}
 --- !u!114 &-1162386633419092666
 MonoBehaviour:
