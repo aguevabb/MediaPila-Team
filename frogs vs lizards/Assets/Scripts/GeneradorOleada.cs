@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GeneradorOleada : MonoBehaviour
 {
+    public static int EnemigoVivos = 0;
+
     public Transform enemyPrefab;
 
     public Transform spawnPoint;
@@ -21,6 +23,11 @@ public class GeneradorOleada : MonoBehaviour
 
     void Update()
     {
+        if (EnemigoVivos > 0)
+        {
+            return;
+        }
+
         if (cuentaRegresiva <= 0f)
         {
             StartCoroutine(SpawnOleada());
@@ -52,5 +59,6 @@ public class GeneradorOleada : MonoBehaviour
     void SpawnEnemigo()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        EnemigoVivos++;
     }
 }

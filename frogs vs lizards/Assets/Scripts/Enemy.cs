@@ -41,6 +41,9 @@ public class Enemy : MonoBehaviour
     void Die ()
     {
         Stats.Dinero += value;
+
+        GeneradorOleada.EnemigoVivos--;
+
         Destroy(gameObject);
     }
 

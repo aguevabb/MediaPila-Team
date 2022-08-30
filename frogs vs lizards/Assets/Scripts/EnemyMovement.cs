@@ -48,6 +48,7 @@ public class EnemyMovement : MonoBehaviour
     void BaseFinal()
     {
         Stats.Vida--;
+        GeneradorOleada.EnemigoVivos--;
         Destroy(gameObject);
     }
 }

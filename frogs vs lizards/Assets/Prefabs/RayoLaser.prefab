@@ -52,6 +52,8 @@ MonoBehaviour:
   balaPrefab: {fileID: 0}
   cadencia: 1
   usarLaser: 1
+  danoPorTiempo: 30
+  slowAmount: 0.5
   lineRenderer: {fileID: 7069108389870143875}
   EfectoImpacto: {fileID: 1423844130293753997}
   enemyTag: Enemy
@@ -96,8 +98,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1698968801
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 3, z: 0}

@@ -36,6 +36,6 @@ public class MenuPausa : MonoBehaviour
 
     public void Menu()
     {
-        Debug.Log("Ir al Menu.");
+        SceneManager.LoadScene("Menu");
     }
 }
