@@ -11,6 +11,10 @@ public class nodo : MonoBehaviour
 
     [Header("Optional")]
     public GameObject torreta;
+    [Header("Optional")]
+    public blueprintTorreta BlueprintTorreta;
+    [Header("Optional")]
+    public bool estaMejorada = false;
 
     private Renderer rend;
     private Color colorInicial;
@@ -41,8 +45,49 @@ public class nodo : MonoBehaviour
         if (!buildManager.PuedeConstruir)
             return;
 
-        buildManager.ConstruirTorretaOn(this);
+        BuildTorreta(buildManager.ConseguirTorretaAConstruir());
 
+    }
+
+    void BuildTorreta (blueprintTorreta blueprint)
+
+    {
+        if (Stats.Dinero < blueprint.coste)
+        {
+            Debug.Log("dinero insuficiente");
+            return;
+        }
+
+        Stats.Dinero -= blueprint.coste;
+
+        GameObject _torreta = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        torreta = _torreta;
+
+        BlueprintTorreta = blueprint;
+
+        Debug.Log("Torreta construida, dinero restante: " + Stats.Dinero);
+    }
+
+    public void UpgradeTorreta ()
+    {
+        if (Stats.Dinero < BlueprintTorreta.costeUpgrade)
+        {
+            Debug.Log("dinero insuficiente para mejorar");
+            return;
+        }
+
+        Stats.Dinero -= BlueprintTorreta.costeUpgrade;
+
+        //Destruye torreta sin mejorar
+        Destroy(torreta);
+
+        //Crea torreta mejorada
+        GameObject _torreta = (GameObject)Instantiate(BlueprintTorreta.prefabUpgrade, GetBuildPosition(), Quaternion.identity);
+        torreta = _torreta;
+
+        estaMejorada = true;
+
+        Debug.Log("Torreta Mejorada, dinero restante: " + Stats.Dinero);
     }
 
     void OnMouseEnter()
