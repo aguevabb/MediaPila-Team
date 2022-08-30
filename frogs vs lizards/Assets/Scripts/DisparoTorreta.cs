@@ -59,6 +59,11 @@ public class DisparoTorreta : MonoBehaviour
             {
                 Enemy.TakeDamage(damage);
             }
+            PlayScript PlayScript = hit.transform.GetComponent<PlayScript>();
+            if (PlayScript != null)
+            {
+                PlayScript.startgame();
+            }
         }
         Muzzling = !Muzzling;
         Muzzle();
