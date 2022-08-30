@@ -26,21 +26,6 @@ public class BuildManager : MonoBehaviour
 
     public bool PuedeConstruir { get { return TorretaAConstruir != null; } }
     public bool TieneDinero { get { return Stats.Dinero >= TorretaAConstruir.coste; } }
-    public void ConstruirTorretaOn(nodo node)
-    {
-        if (Stats.Dinero < TorretaAConstruir.coste)
-        {
-            Debug.Log("dinero insuficiente");
-            return;
-        }
-
-        Stats.Dinero -= TorretaAConstruir.coste;
-
-        GameObject torreta = (GameObject)Instantiate(TorretaAConstruir.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.torreta = torreta;
-
-        Debug.Log("Torreta construida, dinero restante: " + Stats.Dinero);
-    }
 
     public void SeleccionarNodo (nodo node)
     {
@@ -65,4 +50,8 @@ public class BuildManager : MonoBehaviour
         DeseleccionarNode();
     }
 
+    public blueprintTorreta ConseguirTorretaAConstruir ()
+    {
+        return TorretaAConstruir;
+    }
 }

@@ -8,4 +8,7 @@ public class blueprintTorreta {
     public GameObject prefab;
     public int coste;
 
+    public GameObject prefabUpgrade;
+    public int costeUpgrade;
+
 }
