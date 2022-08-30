@@ -90,6 +90,15 @@ public class nodo : MonoBehaviour
         Debug.Log("Torreta Mejorada, dinero restante: " + Stats.Dinero);
     }
 
+    public void VenderTorreta ()
+    {
+        Stats.Dinero += BlueprintTorreta.GetCosteVenta();
+
+        Destroy(torreta);
+        BlueprintTorreta = null;
+
+    }
+
     void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())

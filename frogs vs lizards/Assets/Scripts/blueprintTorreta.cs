@@ -11,4 +11,10 @@ public class blueprintTorreta {
     public GameObject prefabUpgrade;
     public int costeUpgrade;
 
+    public int GetCosteVenta ()
+    {
+
+        return coste / 2;
+    }
+
 }

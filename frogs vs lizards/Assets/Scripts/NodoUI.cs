@@ -11,6 +11,7 @@ public class NodoUI : MonoBehaviour
 
     public Text costeUpgrade;
     public Button botonUpgrade;
+    public Text costeVenta;
 
     public void SetObjetivo (nodo _objetivo)
     {
@@ -29,6 +30,8 @@ public class NodoUI : MonoBehaviour
             botonUpgrade.interactable = false;
         }
 
+        costeVenta.text = "$" + objetivo.BlueprintTorreta.GetCosteVenta();
+
         ui.SetActive(true);
     }
 
@@ -40,6 +43,11 @@ public class NodoUI : MonoBehaviour
     public void Upgrade ()
     {
         objetivo.UpgradeTorreta();
+        BuildManager.instancia.DeseleccionarNode();
+    }
+    public void Sell ()
+    {
+        objetivo.VenderTorreta();
         BuildManager.instancia.DeseleccionarNode();
     }
 }

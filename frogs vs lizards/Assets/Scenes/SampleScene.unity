@@ -246,6 +246,7 @@ MonoBehaviour:
   ui: {fileID: 1952534959}
   costeUpgrade: {fileID: 287629270}
   botonUpgrade: {fileID: 1205486084}
+  costeVenta: {fileID: 726199618}
 --- !u!1 &31128388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1769,7 @@ GameObject:
   - component: {fileID: 287629269}
   - component: {fileID: 287629270}
   m_Layer: 0
-  m_Name: Text Precio
+  m_Name: Text Precio Mejora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4668,7 +4669,7 @@ GameObject:
   - component: {fileID: 726199617}
   - component: {fileID: 726199618}
   m_Layer: 0
-  m_Name: Text Precio
+  m_Name: Text Precio Venta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16493,7 +16494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2092790173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 29386953}
+        m_TargetAssemblyTypeName: NodoUI, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2092790173
 MonoBehaviour:
   m_ObjectHideFlags: 0
