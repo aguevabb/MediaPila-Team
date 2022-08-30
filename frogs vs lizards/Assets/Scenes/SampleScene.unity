@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1952534959}
+  costeUpgrade: {fileID: 287629270}
+  botonUpgrade: {fileID: 1205486084}
 --- !u!1 &31128388
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +861,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &147930607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1748,6 +1756,86 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5187492474324732875, guid: 171961d59903b80459d048f1cc380748, type: 3}
   m_PrefabInstance: {fileID: 2082713347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &287629267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287629268}
+  - component: {fileID: 287629269}
+  - component: {fileID: 287629270}
+  m_Layer: 0
+  m_Name: Text Precio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &287629268
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287629267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1205486083}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -15.5}
+  m_SizeDelta: {x: 0, y: -33.43}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &287629269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287629267}
+  m_CullTransparentMesh: 1
+--- !u!114 &287629270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287629267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: $250
 --- !u!1 &289038365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2456,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &334359208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2550,6 +2644,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &372354332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2654,6 +2754,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &377796088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2763,6 +2869,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &411227181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2924,6 +3036,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &418020633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3142,6 +3260,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &519868072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3503,6 +3627,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &623547656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4090,6 +4220,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &684631192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4124,6 +4260,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &689801551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4305,6 +4447,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &703689899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4508,6 +4656,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9061756333911485178, guid: 171961d59903b80459d048f1cc380748, type: 3}
   m_PrefabInstance: {fileID: 717934121}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &726199614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726199615}
+  - component: {fileID: 726199617}
+  - component: {fileID: 726199618}
+  m_Layer: 0
+  m_Name: Text Precio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &726199615
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726199614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2092790171}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -12.7}
+  m_SizeDelta: {x: 0, y: -40.49}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &726199617
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726199614}
+  m_CullTransparentMesh: 1
+--- !u!114 &726199618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726199614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: $50
 --- !u!1 &739896773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5296,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &777562292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5167,6 +5401,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &779504067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5276,6 +5516,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &805319990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5566,6 +5812,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &862677801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5727,6 +5979,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &880137621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5761,6 +6019,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &895638025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6139,6 +6403,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &955978111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6473,12 +6743,18 @@ MonoBehaviour:
   torretaStandar:
     prefab: {fileID: 7154483215056282124, guid: 50b6e5dcc17d7f64d92ce2aa6e6caf8e, type: 3}
     coste: 100
+    prefabUpgrade: {fileID: 7154483215056282124, guid: f614f277d0468b442899938efe892835, type: 3}
+    costeUpgrade: 100
   misiles:
     prefab: {fileID: 5331293421699829243, guid: 5b78a16f51f8b7a44a9073d970b979d9, type: 3}
     coste: 250
+    prefabUpgrade: {fileID: 5331293421699829243, guid: 88fb5ab3782d8a946957084df04af9c4, type: 3}
+    costeUpgrade: 125
   RayoLaser:
     prefab: {fileID: 869400902146433588, guid: a6e8456a02bc6e949be56562c70b3702, type: 3}
     coste: 175
+    prefabUpgrade: {fileID: 869400902146433588, guid: 15227a116093d91458946331c845f9e8, type: 3}
+    costeUpgrade: 150
 --- !u!1 &987035043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5187492474324732875, guid: 171961d59903b80459d048f1cc380748, type: 3}
@@ -6500,6 +6776,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &987035049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6696,6 +6978,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1028720181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6730,6 +7018,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1030138170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6829,6 +7123,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1043621312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7223,6 +7523,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1108558438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7327,6 +7633,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1134647306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7422,7 +7734,7 @@ GameObject:
   - component: {fileID: 1163824193}
   - component: {fileID: 1163824192}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7436,7 +7748,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163824190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7445,7 +7757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 29.8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163824192
@@ -7470,7 +7782,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b>Upgrade</b>
 
-    $250'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7533,7 +7845,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 31.17456, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7724,6 +8036,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1163824191}
+  - {fileID: 287629268}
   m_Father: {fileID: 1665654269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7775,7 +8088,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1205486085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 29386953}
+        m_TargetAssemblyTypeName: NodoUI, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1205486085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7994,6 +8319,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1236992007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8090,6 +8421,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1289250265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8269,6 +8606,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1304584034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8373,6 +8716,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1322373762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8554,6 +8903,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1367234761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8793,6 +9148,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1386973283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9134,6 +9495,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1401035193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9353,6 +9720,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1421603324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9387,6 +9760,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1426267861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9421,6 +9800,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1442870069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9512,6 +9897,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1450279356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9546,6 +9937,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1458805601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9580,6 +9977,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1460558049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9788,6 +10191,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1490569599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9887,6 +10296,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1492126940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9986,6 +10401,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1495090115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10295,6 +10716,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1512074643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10474,6 +10901,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1601881884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10605,6 +11038,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1610041915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11255,6 +11694,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1669637702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11280,7 +11725,7 @@ GameObject:
   - component: {fileID: 1669916222}
   - component: {fileID: 1669916221}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11294,7 +11739,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669916219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11303,7 +11748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 30.3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669916221
@@ -11328,7 +11773,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b>Sell</b>
 
-    $50'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11391,7 +11836,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 33.561863, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11638,6 +12083,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1736861451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12073,6 +12524,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1790691569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12107,6 +12564,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1792678730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12206,6 +12669,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1793027081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12240,6 +12709,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1799644705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12344,6 +12819,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1809250117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12443,6 +12924,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1811433987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12477,6 +12964,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1817609825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12648,6 +13141,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1822948174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12747,6 +13246,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1824023488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12824,6 +13329,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1864048897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13018,6 +13529,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1872179469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13267,6 +13784,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1889868021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13301,6 +13824,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1890557299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13400,6 +13929,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1898636316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13531,6 +14066,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1905827808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13767,6 +14308,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1921939095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13876,6 +14423,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1945610832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14239,6 +14792,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1977846318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14338,6 +14897,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1980966403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14573,6 +15138,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1987023162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14607,6 +15178,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &1993024715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14775,6 +15352,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2014059815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14809,6 +15392,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 1, g: 0, b: 0, a: 1}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2016834246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14843,6 +15432,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2018526674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14974,6 +15569,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2021876500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15073,6 +15674,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2048429820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15164,6 +15771,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2056008397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15263,6 +15876,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2075175312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15362,6 +15981,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2075767374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15396,6 +16021,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2079484695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15430,6 +16061,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2080691120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15529,6 +16166,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2082713354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15628,6 +16271,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2084400573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15727,6 +16376,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2087938034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15772,6 +16427,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1669916220}
+  - {fileID: 726199615}
   m_Father: {fileID: 1665654269}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16104,6 +16760,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2115366775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16203,6 +16865,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2125351613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16237,6 +16905,12 @@ MonoBehaviour:
   DineroInsuficienteColor: {r: 0, g: 0, b: 0, a: 0}
   posittionOffSet: {x: 0, y: 0, z: 0}
   torreta: {fileID: 0}
+  BlueprintTorreta:
+    prefab: {fileID: 0}
+    coste: 0
+    prefabUpgrade: {fileID: 0}
+    costeUpgrade: 0
+  estaMejorada: 0
 --- !u!65 &2143164626
 BoxCollider:
   m_ObjectHideFlags: 0
