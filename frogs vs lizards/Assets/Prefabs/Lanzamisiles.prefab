@@ -215,12 +215,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rango: 30
+  balaPrefab: {fileID: 963891458083612244, guid: 99054331673727c4b98e1f42c1452c6c, type: 3}
   cadencia: 0.5
+  usarLaser: 0
+  danoPorTiempo: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  EfectoImpacto: {fileID: 0}
   enemyTag: Enemy
   Rotador: {fileID: 4404812070084264295}
   velocidadDeGiro: 10
-  balaPrefab: {fileID: 963891458083612244, guid: 99054331673727c4b98e1f42c1452c6c, type: 3}
   firePoint: {fileID: 5560763251004051085}
+  maxAmmo: 3
+  currentAmmo: 0
 --- !u!1 &6785089343276101436
 GameObject:
   m_ObjectHideFlags: 0

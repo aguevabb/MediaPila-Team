@@ -280,9 +280,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rango: 15
+  balaPrefab: {fileID: 4663306049570634213, guid: b59364814eee09841a17b67df48279f9, type: 3}
   cadencia: 1
+  usarLaser: 0
+  danoPorTiempo: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  EfectoImpacto: {fileID: 0}
   enemyTag: Enemy
   Rotador: {fileID: 5598902977742887441}
   velocidadDeGiro: 10
-  balaPrefab: {fileID: 4663306049570634213, guid: b59364814eee09841a17b67df48279f9, type: 3}
   firePoint: {fileID: 5598902979561535312}
+  maxAmmo: 3
+  currentAmmo: 0

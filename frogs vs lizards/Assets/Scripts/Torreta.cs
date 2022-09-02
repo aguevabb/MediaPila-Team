@@ -35,8 +35,18 @@ public class Torreta : MonoBehaviour
 
 	public Transform firePoint;
 	
+	[Header("Municion y recarga")]
+	public float maxAmmo;
+	public float currentAmmo;
+	//public float reloadTime;---->HAY QUE MODIFICAR ESTE SCRIPT//
+	
 
 	// Use this for initialization
+	
+	private void Awake()
+	{
+		currentAmmo = maxAmmo;
+	}
 	void Start()
 	{
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -94,7 +104,8 @@ public class Torreta : MonoBehaviour
         {
 			if (contadorCadencia <= 0f)
 			{
-				Disparar();
+				//Disparar();//
+				tryShot();
 				contadorCadencia = 1f / cadencia;
 			}
 
@@ -136,7 +147,7 @@ public class Torreta : MonoBehaviour
 
 	void Disparar ()
     {
-		Debug.Log("DISPARAR!!!");
+		//Debug.Log("DISPARAR!!!");//
 
 		GameObject balaGo = (GameObject)Instantiate(balaPrefab, firePoint.position, firePoint.rotation);
 		Bala bala = balaGo.GetComponent<Bala>();
@@ -144,6 +155,19 @@ public class Torreta : MonoBehaviour
 		if (bala != null)
 			bala.Buscar(target);
     }
+	//RECARGA//
+	//Comprobando si hay municion//
+	private bool tryShot()
+	{
+		if (currentAmmo>=1)
+		{
+			Disparar();
+			currentAmmo -= 1;
+			return true;
+		}
+
+		return false;
+	}
 
     // Update is called once per frame
 

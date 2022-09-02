@@ -60,6 +60,8 @@ MonoBehaviour:
   Rotador: {fileID: 3414737533595728975}
   velocidadDeGiro: 10
   firePoint: {fileID: 8513751116958202311}
+  maxAmmo: 3
+  currentAmmo: 0
 --- !u!120 &7069108389870143875
 LineRenderer:
   m_ObjectHideFlags: 0
