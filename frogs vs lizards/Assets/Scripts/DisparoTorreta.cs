@@ -29,7 +29,9 @@ public class DisparoTorreta : MonoBehaviour
     private void Awake()
     {
         currentAmmo = maxAmmo;
+
     }
+
     private void FixedUpdate()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextshotRate)
@@ -44,6 +46,7 @@ public class DisparoTorreta : MonoBehaviour
             StartCoroutine(Reload());
         }
     }
+    
 
     void Shoot()
     {
@@ -76,7 +79,7 @@ public class DisparoTorreta : MonoBehaviour
     
     //RECARGA//
     //Comprobando si hay municion//
-    private bool tryShot()
+    public bool tryShot()
     {
         if (currentAmmo>=1)
         {

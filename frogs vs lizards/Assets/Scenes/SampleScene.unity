@@ -598,6 +598,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9061756333911485178, guid: 171961d59903b80459d048f1cc380748, type: 3}
   m_PrefabInstance: {fileID: 97868040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &101808616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5096086689152295693, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+  m_PrefabInstance: {fileID: 5096695508125466529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &101890305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5187492474324732875, guid: 171961d59903b80459d048f1cc380748, type: 3}
@@ -608,7 +613,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5129296323630031555, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
   m_PrefabInstance: {fileID: 5096695508125466529}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 101808616}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fcca1b45bc274b43baa5d2d362bb1e7, type: 3}
@@ -4844,6 +4849,42 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1869745098}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: DeseleccionarNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1869745101}
+        m_TargetAssemblyTypeName: ActivarCosas, Assembly-CSharp
+        m_MethodName: activarTorreta
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1869745101}
+        m_TargetAssemblyTypeName: ActivarCosas, Assembly-CSharp
+        m_MethodName: activarTienda
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &739896776
 MonoBehaviour:
@@ -13362,6 +13403,7 @@ GameObject:
   - component: {fileID: 1869745098}
   - component: {fileID: 1869745099}
   - component: {fileID: 1869745100}
+  - component: {fileID: 1869745101}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -13458,6 +13500,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1888260656}
+--- !u!114 &1869745101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869745095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8de6da03fb0ae4687f24febf256cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TiendaActivada: 0
+  TorretaActivada: 0
+  _tienda: {fileID: 977291525}
+  _torreta: {fileID: 101808616}
 --- !u!1001 &1872179462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17046,6 +17104,10 @@ PrefabInstance:
     - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: shotRateTime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797863284795102146, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
+      propertyPath: torretaActivada
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5091960651729430583, guid: 5aa9c7e9c0b7f4a4ba5822c7dee60a3e, type: 3}
       propertyPath: m_RootOrder

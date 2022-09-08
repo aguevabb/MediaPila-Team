@@ -14,6 +14,7 @@ public class Tienda : MonoBehaviour{
     {
         buildManager = BuildManager.instancia;
     }
+
     public void SeleccionarTorreta ()
     {
         Debug.Log("Torreta Comprada");
