@@ -17,7 +17,7 @@ public class DisparoTorreta : MonoBehaviour
 
     //Munición y recarga//
     public int maxAmmo;
-    public int currentAmmo;
+    public static int currentAmmo;
     public float reloadTime;
 
 
@@ -30,8 +30,6 @@ public class DisparoTorreta : MonoBehaviour
     {
         
         currentAmmo = maxAmmo;
-        
-        EventManager.current.UpdateBulletsEvent.Invoke(currentAmmo);
     }
 
     private void FixedUpdate()
@@ -87,7 +85,6 @@ public class DisparoTorreta : MonoBehaviour
         {
             Shoot();
             currentAmmo -= 1;
-            EventManager.current.UpdateBulletsEvent.Invoke(currentAmmo);
             return true;
         }
 
@@ -112,7 +109,6 @@ public class DisparoTorreta : MonoBehaviour
         Debug.Log("Recargando.....");
         yield return new WaitForSeconds(reloadTime);
         currentAmmo = maxAmmo;
-        EventManager.current.UpdateBulletsEvent.Invoke(currentAmmo);
         Debug.Log("Recarga Finalizada");
     }
 }
