@@ -8,9 +8,9 @@ public class WeaponUI : MonoBehaviour
 {
     public TMP_Text currentBullets;
 
-    private void OnEnable()
+    public void OnEnable()
     {
-        EventManager.current.updateBulletsEvent.AddListener(updateCurrent);
+        EventManager.current.UpdateBulletsEvent.AddListener(UpdateCurrent);
     }
 
     private void OnDisable()
@@ -19,7 +19,7 @@ public class WeaponUI : MonoBehaviour
     }
 
 
-    public void updateCurrent(float newCurrentBullets)
+    private void UpdateCurrent(int newCurrentBullets)
     {
         currentBullets.text = newCurrentBullets.ToString();
     }

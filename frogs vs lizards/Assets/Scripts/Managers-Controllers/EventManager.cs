@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-[Serializable]
-public class EventoEnteros : UnityEvent<float>{}
+
+[Serializable] public class evento : UnityEvent<int>{}
 public class EventManager : MonoBehaviour
 {
     public static EventManager current;
@@ -20,5 +20,5 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public EventoEnteros updateBulletsEvent = new EventoEnteros();
+    public evento UpdateBulletsEvent = new evento();
 }
