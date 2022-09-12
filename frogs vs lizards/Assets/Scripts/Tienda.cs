@@ -7,6 +7,7 @@ public class Tienda : MonoBehaviour{
     public blueprintTorreta torretaStandar;
     public blueprintTorreta misiles;
     public blueprintTorreta RayoLaser;
+    public blueprintTorreta HongoPlata;
 
     BuildManager buildManager;
 
@@ -30,5 +31,11 @@ public class Tienda : MonoBehaviour{
     {
         Debug.Log("Otra Torreta mas Comprada");
         buildManager.SeleccionarTorretaAConstruir(RayoLaser);
+    }
+
+    public void SeleccionarHongoPlata()
+    {
+        Debug.Log("Otra Torreta mas Comprada");
+        buildManager.SeleccionarTorretaAConstruir(HongoPlata);
     }
 }

@@ -19,6 +19,7 @@ public class BuildManager : MonoBehaviour
     public GameObject TorretaStandarPrefab;
     public GameObject OtroTorretaStandarPrefab;
     public GameObject LaserPrefab;
+    public GameObject HongoPPrefab;
     public NodoUI nodeUI;
 
     private blueprintTorreta TorretaAConstruir;
