@@ -10,6 +10,8 @@ public class TorretaPlata : MonoBehaviour
     void Start()
     {
         StartCoroutine(Esperar());
+
+        transform.Rotate(-90, 0, 180);
     }
 
     IEnumerator Esperar() 

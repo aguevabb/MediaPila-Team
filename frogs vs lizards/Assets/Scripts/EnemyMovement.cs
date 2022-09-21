@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private Transform target;
     private int wavepointIndex = 0;
-
+    public float turnSpeed;
     private Enemy enemy;
 
     private void Start()
@@ -21,6 +21,9 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * enemy.velocidad * Time.deltaTime, Space.World);
+
+        Quaternion q = Quaternion.LookRotation(target.position - transform.position);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, q, turnSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
