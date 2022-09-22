@@ -53,6 +53,10 @@ namespace Unity
         CameraState m_TargetCameraState = new CameraState();
         CameraState m_InterpolatingCameraState = new CameraState();
 
+        public Camera mainCamera;
+        public float speed = 1;
+        private bool buttonReleased;
+
         [Tooltip("Rotating the camera requires holding down the right mouse button.")]
         public bool IsRMBRequired = false;
 
@@ -116,69 +120,65 @@ namespace Unity
 
         void Update()
         {
-            /* Exit Sample
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetMouseButton(1))
             {
-                Application.Quit();
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-#endif
-            }
-            */
-
-            if (IsRMBRequired)
-            {
-                // Hide and lock cursor when right mouse button pressed
-                if (Input.GetMouseButtonDown(1))
+                buttonReleased = false;
+                if (mainCamera.fieldOfView >= 45)
                 {
-                    Cursor.lockState = CursorLockMode.Locked;
-                }
-
-                // Unlock and show cursor when right mouse button released
-                if (Input.GetMouseButtonUp(1))
-                {
-                    Cursor.visible = true;
-                    Cursor.lockState = CursorLockMode.None;
+                    mainCamera.fieldOfView -= 1;
                 }
             }
 
-            // Rotation
-            if (!IsRMBRequired || (IsRMBRequired && Input.GetMouseButton(1)))
+            if (Input.GetMouseButtonUp(1))
             {
-                var mouseMovement = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") * (invertY ? 1 : -1));
+                buttonReleased = true;
+            }
 
-                var mouseSensitivityFactor = mouseSensitivityCurve.Evaluate(mouseMovement.magnitude);
-
-                m_TargetCameraState.yaw += mouseMovement.x * mouseSensitivityFactor;
-                m_TargetCameraState.pitch += mouseMovement.y * mouseSensitivityFactor;
-
-                //rotación de la camara limitacion
-
-                //a los lados
-
-                if (m_TargetCameraState.yaw >= 75)
+            if (buttonReleased)
+            {
+                if (mainCamera.fieldOfView <= 80)
                 {
-                    m_TargetCameraState.yaw = 75;
-
-                } else if (m_TargetCameraState.yaw <= -75)
-                {
-                    m_TargetCameraState.yaw = -75;
-
+                    mainCamera.fieldOfView += 1;
                 }
+            }
 
-                // si cambiamos la posicion de la camara de la torreta hay que cambiar estos valores
-                //arriba y abajo
-                if (m_TargetCameraState.pitch >= 32)
-                {
-                    m_TargetCameraState.pitch = 32;
+            Cursor.lockState = CursorLockMode.Locked;
 
-                } else if (m_TargetCameraState.pitch <= 4)
-                {
-                    m_TargetCameraState.pitch = 4;
+            var mouseMovement = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") * (invertY ? 1 : -1));
 
-                }
+            var mouseSensitivityFactor = mouseSensitivityCurve.Evaluate(mouseMovement.magnitude);
+
+            m_TargetCameraState.yaw += mouseMovement.x * mouseSensitivityFactor;
+            m_TargetCameraState.pitch += mouseMovement.y * mouseSensitivityFactor;
+
+            //rotación de la camara limitacion
+
+            //a los lados
+
+            if (m_TargetCameraState.yaw >= 75)
+            {
+                m_TargetCameraState.yaw = 75;
 
             }
+            else if (m_TargetCameraState.yaw <= -75)
+            {
+                m_TargetCameraState.yaw = -75;
+
+            }
+
+            // si cambiamos la posicion de la camara de la torreta hay que cambiar estos valores
+            //arriba y abajo
+            if (m_TargetCameraState.pitch >= 32)
+            {
+                m_TargetCameraState.pitch = 32;
+
+            }
+            else if (m_TargetCameraState.pitch <= 4)
+            {
+                m_TargetCameraState.pitch = 4;
+
+            }
+
 
             /*
             
