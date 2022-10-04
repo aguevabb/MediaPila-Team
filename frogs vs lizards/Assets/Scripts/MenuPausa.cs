@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuPausa : MonoBehaviour
 {
     public GameObject ui;
-
-    void Update()
+    
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
@@ -36,6 +37,6 @@ public class MenuPausa : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        
     }
 }

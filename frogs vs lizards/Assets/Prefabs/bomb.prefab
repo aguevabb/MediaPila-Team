@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5174ca569f42b584cb8c413e02bdc81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 30
   damage: 100
   RadioExplosion: 10
   efectoImpacto: {fileID: 1000013060428206, guid: 67104ce9de86f7a4eb50e86656cb8ac9, type: 3}
