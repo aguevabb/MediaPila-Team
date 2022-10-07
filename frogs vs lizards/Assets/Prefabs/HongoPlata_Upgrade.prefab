@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6283719429315267706}
   - component: {fileID: 8129198326212884656}
   - component: {fileID: 6236313674612778287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HongoPlata_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}

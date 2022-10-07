@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7876041396469608699}
   - component: {fileID: 4830963823251345744}
   - component: {fileID: 8128070343481800973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 530135231716915342}
   - component: {fileID: 9085077788142514964}
   - component: {fileID: 7069108389870143875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RayoLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8513751116958202311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7989510328942964762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3414737533595728975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 1957803851810731386}
   - component: {fileID: 5984197436818399336}
   - component: {fileID: 1298750571121861437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roundcube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 6283147036907944422}
   - component: {fileID: 1423844130293753997}
   - component: {fileID: 1820099292272534044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EfectoImpacto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5250,7 +5250,7 @@ GameObject:
   - component: {fileID: 1108911873536921266}
   - component: {fileID: 2942368321176130290}
   - component: {fileID: 4185109157634732430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roundcube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5333,7 +5333,7 @@ GameObject:
   - component: {fileID: 7865409086328470051}
   - component: {fileID: 2821742760392090893}
   - component: {fileID: 1837493163012901628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vert.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5416,7 +5416,7 @@ GameObject:
   - component: {fileID: 6776856947828385468}
   - component: {fileID: 6717352382480275722}
   - component: {fileID: 536235020046503406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5499,7 +5499,7 @@ GameObject:
   - component: {fileID: 858207887630091678}
   - component: {fileID: 395716242194040054}
   - component: {fileID: 5114804319267110802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere.003_Sphere.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5912904191318528617}
   - component: {fileID: 5520054353816149760}
   - component: {fileID: 7040134668899711330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598902977742887441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rotador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598902979561535312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7494557400177637558}
   - component: {fileID: 5598902979434178939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torreta_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1252883509495329999}
   - component: {fileID: 4550178248509003108}
   - component: {fileID: 928524287539739961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}

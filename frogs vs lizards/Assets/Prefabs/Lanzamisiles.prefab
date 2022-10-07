@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4807416347421824833}
   - component: {fileID: 4539956746853622247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lanzamisiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
