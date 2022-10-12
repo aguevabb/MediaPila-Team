@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class DisparoTorreta : MonoBehaviour
 {
@@ -22,8 +23,8 @@ public class DisparoTorreta : MonoBehaviour
 
 
     //Efectos//
-    public ParticleSystem MuzzleL;
-    public ParticleSystem MuzzleR;
+    public VisualEffect MuzzleL;
+    public VisualEffect MuzzleR;
     public bool Muzzling = false;
 
     public void Awake()
