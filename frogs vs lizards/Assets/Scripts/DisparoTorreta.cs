@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using EZCameraShake;
 
 public class DisparoTorreta : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class DisparoTorreta : MonoBehaviour
     public VisualEffect MuzzleR;
     public bool Muzzling = false;
 
+
     public void Awake()
     {
         
@@ -39,7 +41,7 @@ public class DisparoTorreta : MonoBehaviour
         {
             nextshotRate = Time.time + 1f / shotRateTime;
             tryShot();
-            //Shoot();//
+
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -57,6 +59,7 @@ public class DisparoTorreta : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             raycastHits = hit.point;
+            CameraShaker.Instance.ShakeOnce(2f, 2f, 1f, 1f);
 
             Enemy Enemy = hit.transform.GetComponent<Enemy>();
             if (Enemy != null)
@@ -82,11 +85,14 @@ public class DisparoTorreta : MonoBehaviour
     //Comprobando si hay municion//
     public bool tryShot()
     {
+
         if (currentAmmo>=1)
         {
             Shoot();
             currentAmmo -= 1;
+            CameraShaker.Instance.ShakeOnce(2f, 2f, 1f, 1f);
             return true;
+
         }
 
         return false;
