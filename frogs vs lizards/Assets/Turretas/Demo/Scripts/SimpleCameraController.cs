@@ -155,14 +155,14 @@ namespace Unity
 
             //a los lados
 
-            if (m_TargetCameraState.yaw >= 75)
+            if (m_TargetCameraState.yaw >= 60)
             {
-                m_TargetCameraState.yaw = 75;
+                m_TargetCameraState.yaw = 60;
 
             }
-            else if (m_TargetCameraState.yaw <= -75)
+            else if (m_TargetCameraState.yaw <= -60)
             {
-                m_TargetCameraState.yaw = -75;
+                m_TargetCameraState.yaw = -60;
 
             }
 

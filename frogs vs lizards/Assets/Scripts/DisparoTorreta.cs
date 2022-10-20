@@ -27,7 +27,11 @@ public class DisparoTorreta : MonoBehaviour
     public VisualEffect MuzzleL;
     public VisualEffect MuzzleR;
     public bool Muzzling = false;
-
+    
+    //Trazado de balas//
+    public Transform gunBarrellL;
+    public Transform gunBarrellR;
+    public TrailRenderer bulletTrail;
 
     public void Awake()
     {
@@ -41,7 +45,7 @@ public class DisparoTorreta : MonoBehaviour
         {
             nextshotRate = Time.time + 1f / shotRateTime;
             tryShot();
-
+            //Shoot();//
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -53,13 +57,22 @@ public class DisparoTorreta : MonoBehaviour
 
     void Shoot()
     {
+        var bulletL = Instantiate(bulletTrail, gunBarrellL.position, Quaternion.identity);
+        bulletL.AddPosition(gunBarrellL.position);
+        {
+            bulletL.transform.position = transform.position + (turretCam.transform.forward * 200);
+        }
+        var bulletR = Instantiate(bulletTrail, gunBarrellR.position, Quaternion.identity);
+        bulletR.AddPosition(gunBarrellR.position);
+        {
+            bulletR.transform.position = transform.position + (turretCam.transform.forward * 200);
+        }
         RaycastHit hit;
         if (Physics.Raycast(turretCam.transform.position, turretCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
 
             raycastHits = hit.point;
-            CameraShaker.Instance.ShakeOnce(2f, 2f, 1f, 1f);
 
             Enemy Enemy = hit.transform.GetComponent<Enemy>();
             if (Enemy != null)
@@ -85,14 +98,12 @@ public class DisparoTorreta : MonoBehaviour
     //Comprobando si hay municion//
     public bool tryShot()
     {
-
         if (currentAmmo>=1)
         {
             Shoot();
             currentAmmo -= 1;
-            CameraShaker.Instance.ShakeOnce(2f, 2f, 1f, 1f);
+            CameraShaker.Instance.ShakeOnce(2f, 6f, 0.5f, 0.5f);
             return true;
-
         }
 
         return false;

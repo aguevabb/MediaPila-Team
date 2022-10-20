@@ -7,11 +7,9 @@ public class ActivarCosas : MonoBehaviour
     public bool TiendaActivada = false;
     public bool TorretaActivada;
     public bool MunicionActivada;
-    public bool HabilidadesActivada;
     [SerializeField] GameObject _tienda;
     [SerializeField] GameObject _torreta;
     [SerializeField] GameObject _municion;
-    [SerializeField] GameObject _habilidades;
     void Start()
     {
         MunicionActivada = false;
@@ -61,19 +59,5 @@ public class ActivarCosas : MonoBehaviour
             MunicionActivada = true;
         }
         Debug.Log(MunicionActivada);
-    }
-    public void activarHabilidades()
-    {
-        if (HabilidadesActivada == true)
-        {
-            _habilidades.SetActive(false);
-            HabilidadesActivada = false;
-        }
-        else
-        {
-            _habilidades.SetActive(true);
-            HabilidadesActivada = true;
-        }
-        Debug.Log(HabilidadesActivada);
     }
 }
